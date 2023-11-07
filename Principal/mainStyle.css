@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+* {
+    list-style: none;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
+    height: 145vh;
+    position: relative;
 }
 
 .container {
@@ -9,53 +16,103 @@ body {
     margin: 0 auto;
 }
 
-.header {
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
-    position: relative;
+
+    align-items: center;
+    padding: 0 5%;
+    height: 100px;
+}
+
+.header h2 {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.logo-container {
+    margin-right: 0px; /* Ajusta el margen entre el logo y el título según tu preferencia */
 }
 
 .logo {
-    color: #303030;
-    font-size: 25px;
-    font-weight: 800;
+    height: 50px;
 }
 
-.menu .navbar ul li {
-    position: relative;
-    float: left;
+.header ul {
+    margin-left: 600px;
 }
 
-.menu .navbar {
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    margin: 0 15px;
     font-size: 18px;
-    padding: 20px;
-    color: #303030;
-    display: block;
     font-weight: 600;
+    cursor: pointer;
+    color: #000000;
+}
+
+.item:hover {
+    color: #28b0e6;
 }
 
 #menu {
     display: none;
 }
 
-.menu label {
+.menu-icono {
+    width: 25px;
+}
+
+label {
     cursor: pointer;
     display: none;
 }
 
-.menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
+.btn {
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: #28b0e6;
+    color: #f2f2f2;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-.logo-img {
-    width: 10%;
-    padding: 20px 20px;
+.btn:hover {
+    background-color: #228ab4;
 }
 
-
+@media(max-width:991px) {
+    .menu {
+        padding: 30px;
+        margin: 0;
+    }
+    label {
+        display: initial;
+    }
+    .menu {
+        position:absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+    .item {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    .btn {
+        width: 100px;
+    }
+    #menu:checked ~ .menu {
+        display: initial;
+    }
+}

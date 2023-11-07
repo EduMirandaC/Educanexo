@@ -3,9 +3,14 @@ document.getElementById("btn-estudiante").addEventListener("click",estudiante)
 document.getElementById("btn-docente").addEventListener("click",docente)
 window.addEventListener("resize",anchoPagina);
 
+const cuentas = ["admin1", "admin2", "admin3", "admin4"];
+var ingresar1 = document.getElementsByClassName("bIngresar1");
+var ingresar2 = document.getElementsByClassName("bIngresar1");
 
+//function buscarCuenta(){
 
-// Variables
+//}
+
 var contenedor_login = document.querySelector(".loginest-doc");
 var formulario_login_est = document.querySelector(".formulario_login-est");
 var formulario_login_doc = document.querySelector(".formulario_login-doc");
