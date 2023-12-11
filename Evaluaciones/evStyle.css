@@ -79,6 +79,7 @@ main {
     margin-right: calc(20% + 20px);
     margin-bottom: 50px;
     flex: 1;
+    height: auto;
     padding: 10px;
     background-color: white;
     max-width: 80%; /* Ajustar el ancho máximo según sea necesario */
@@ -154,6 +155,18 @@ main {
     margin-bottom: 20px;
 }
 
+.evalua {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #e8e7e7; /* Color gris para diferenciar los bloques en ev-p */
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .noti{
     margin-bottom: 20px;
     margin-top: 20px;
@@ -162,6 +175,7 @@ main {
     padding: 50px;
     text-align: left;
     cursor: pointer;
+    height: 150%;
 }
 
 /* Estilos del Footer */
@@ -205,23 +219,38 @@ main {
     margin-right: 10px; /* Espaciado entre el ícono y el correo */
 }
 
+.cursos h2{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+}
+
 .cursos {
-    width: 100%; /* Ocupa el ancho completo del main */
     display: flex;
     flex-wrap: wrap; /* Permite que los divs curso se ubiquen en una nueva línea si no caben en el ancho disponible */
     justify-content: space-between; /* Distribuye los divs curso en el espacio disponible */
 }
 
-/* Estilos de los Divs Curso */
 .curso {
-    width: 100%; /* Resta el margen de 20px para que cada div ocupe el 90% del main */
+    width: calc(70% - 10px); /* El 50% del ancho menos el espacio entre elementos */
     margin-bottom: 20px;
     border-radius: 15px;
     background-color: #a4bae9;
-    padding: 40px;
+    padding: 30px;
     box-sizing: border-box;
     cursor: pointer;
     border: 2px solid #315481; 
 }
 
+.recom {
+    width: calc(30% - 10px); /* El 50% del ancho menos el espacio entre elementos */
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: #a4bae9;
+    padding: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 2px solid #315481; 
+}
 
