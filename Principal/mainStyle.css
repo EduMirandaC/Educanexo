@@ -1,120 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-/*
-body {
-    font-family: 'Poppins', sans-serif;
-    height: 145vh;
-    position: relative;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-
-    align-items: center;
-    padding: 0 5%;
-    height: 100px;
-}
-
-.header h2 {
-    margin: 0;
-    margin-left: 10px;
-}
-
-.logo-container {
-    margin-right: 0px; 
-}
-
-.logo {
-    height: 50px;
-}
-
-.header ul {
-    margin-left: 600px;
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item {
-    margin: 0 15px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    color: #000000;
-}
-
-.item:hover {
-    color: #28b0e6;
-}
-
-#menu {
-    display: none;
-}
-
-.menu-icono {
-    width: 25px;
-}
-
-label {
-    cursor: pointer;
-    display: none;
-}
-
-.btn {
-    padding: 10px 24px;
-    border-radius: 30px;
-    background-color: #28b0e6;
-    color: #f2f2f2;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #228ab4;
-}
-
-@media(max-width:991px) {
-    .menu {
-        padding: 30px;
-        margin: 0;
-    }
-    label {
-        display: initial;
-    }
-    .menu {
-        position:absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #323337;
-        display: none;
-    }
-    .item {
-        margin: 0 0 20px 0;
-        width: 100%;
-    }
-    .btn {
-        width: 100px;
-    }
-    #menu:checked ~ .menu {
-        display: initial;
-    }
-}
-*/
-
-/* Reset de estilos para asegurar la consistencia en diferentes navegadores */
 * {
     margin: 0;
     padding: 0;
@@ -127,6 +12,7 @@ body {
     font-family: 'Poppins', sans-serif;
     position: relative;
     margin: 0;
+    display: flex;
 }
 
 /* Estilos del Header */
@@ -142,6 +28,16 @@ body {
     left: 0;
     height: 70px;
     z-index: 1000;
+}
+
+.header a{
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    outline: none; /* Elimina el relieve azul al enfocar el enlace */
+    color: black;
+}
+
+.header a:hover {
+    text-decoration: underline; /* Agrega subrayado solo al pasar el ratón sobre el enlace */
 }
 
 .logo-container {
@@ -177,13 +73,11 @@ main {
     display: flex;
     justify-content: left; /* Centrar horizontalmente */
     align-items: flex-start; /* Alinear arriba verticalmente */
-    margin-top: 80px;
+    margin-top:90px;
     min-height: 100vh;
     margin-left: calc(20% + 20px);
-}
-
-/* Estilos del Contenedor Central */
-main {
+    margin-right: calc(20% + 20px);
+    margin-bottom: 50px;
     flex: 1;
     padding: 10px;
     background-color: white;
@@ -197,7 +91,6 @@ main {
     height: 75%; 
     top: 70px;
     margin-left: 10px;
-    margin-top: 20px;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -214,44 +107,61 @@ main {
 
 .ev-pendientes {
     width: 100%;
-    background-color: #e8e7e7; /* Color para diferenciar de la barra derecha */
+    background-color: white; /* Color para diferenciar de la barra derecha */
     margin-bottom: 10px;
     border-radius: 10px;
 }
 
 .recomendaciones {
     width: 100%;
-    background-color: #e8e7e7; /* Otro color para diferenciar de la barra derecha */
+    background-color: white; /* Otro color para diferenciar de la barra derecha */
     border-radius: 10px;
+}
+
+.rec-recom ul li {
+    background-color: #e8e7e7; /* Color de fondo, ajusta según sea necesario */
+    padding: 5px; /* Espaciado interno, ajusta según sea necesario */
+    margin-bottom: 10px; /* Espaciado inferior entre los elementos */
+    border-radius: 10px; /* Bordes redondeados, ajusta según sea necesario */
 }
 
 .ev-p {
     margin-bottom: 20px;
-    background-color: #ffffff; /* Color gris para diferenciar los bloques en ev-p */
+    margin-top: 20px;
+    background-color: #e8e7e7; /* Color gris para diferenciar los bloques en ev-p */
     border-radius: 10px;
     padding: 15px;
     text-align: left;
+    cursor: pointer;
 }
 
 .barra-derecha {
     width: 20%;
     color: black;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 15px;
     height: 75%;
-    top: 70px;
+    top: 80px;
     right: 10px; /* Ajusta la posición desde el lado derecho */
     position: fixed;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background-color: #e8e7e7; /* Ajusta el color de fondo según sea necesario */
+    background-color: white; /* Ajusta el color de fondo según sea necesario */
     text-align: center;
 }
 
-.anuncios-principales h2{
-    font-size: 10px;
+.anuncios-principales h3{
     margin-bottom: 20px;
+}
+
+.noti{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #e8e7e7; /* Color gris para diferenciar los bloques en ev-p */
+    border-radius: 10px;
+    padding: 50px;
+    text-align: left;
+    cursor: pointer;
 }
 
 /* Estilos del Footer */
@@ -265,6 +175,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 /* Estilos para la clase socials */
@@ -294,5 +205,23 @@ main {
     margin-right: 10px; /* Espaciado entre el ícono y el correo */
 }
 
+.cursos {
+    width: 100%; /* Ocupa el ancho completo del main */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los divs curso se ubiquen en una nueva línea si no caben en el ancho disponible */
+    justify-content: space-between; /* Distribuye los divs curso en el espacio disponible */
+}
+
+/* Estilos de los Divs Curso */
+.curso {
+    width: 100%; /* Resta el margen de 20px para que cada div ocupe el 90% del main */
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: #a4bae9;
+    padding: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 2px solid #315481; 
+}
 
 
