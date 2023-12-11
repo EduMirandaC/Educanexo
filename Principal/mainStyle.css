@@ -217,7 +217,7 @@ main {
     width: 100%; /* Resta el margen de 20px para que cada div ocupe el 90% del main */
     margin-bottom: 20px;
     border-radius: 15px;
-    background-color: #a4bae9;
+    background-color: #90e0ff;
     padding: 40px;
     box-sizing: border-box;
     cursor: pointer;

@@ -200,28 +200,6 @@ main {
     justify-content: space-between; /* Distribuye los divs curso en el espacio disponible */
 }
 
-.curso {
-    width: calc(70% - 10px); /* El 50% del ancho menos el espacio entre elementos */
-    margin-bottom: 20px;
-    border-radius: 15px;
-    background-color: #a4bae9;
-    padding: 30px;
-    box-sizing: border-box;
-    cursor: pointer;
-    border: 2px solid #315481; 
-}
-
-.recom {
-    width: calc(30% - 10px); /* El 50% del ancho menos el espacio entre elementos */
-    margin-bottom: 20px;
-    border-radius: 15px;
-    background-color: #a4bae9;
-    padding: 30px;
-    box-sizing: border-box;
-    cursor: pointer;
-    border: 2px solid #315481; 
-}
-
 .horario {
     width: 100%;
 }
